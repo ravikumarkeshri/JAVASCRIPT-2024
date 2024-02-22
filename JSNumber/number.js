@@ -61,3 +61,12 @@ const sensorDataDecimal = parseInt(sensorData,2)
 const Checkoutprice = "$99.99"
 const CheckoutpriceFloat = parseFloat(Checkoutprice.replace("$",""));
 // console.log(CheckoutpriceFloat);
+
+
+const inputGPA = "3.8";
+const parseGPA = parseFloat(inputGPA);
+if(isNaN(parseGPA)){
+    console.log("Invlaid Input");
+}else{
+    console.log(`Your GPA is ${parseGPA}`);
+}
