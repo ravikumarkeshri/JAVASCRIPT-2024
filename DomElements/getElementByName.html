@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="getElementByName.js" defer></script>
+
+</head>
+<style>
+    body {
+        border: 2px solid red;
+        height: 100vh;
+        width: auto;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #000;
+
+    }
+
+    form {
+        background-color: white;
+
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        border: 2px solid green;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    button {
+        border-radius: 10px;
+        border: 2px solid red;
+        padding: 10px 10px;
+        font-size: large;
+        width: 100%;
+        margin-top: 20px;
+
+
+
+    }
+
+    .form-box {
+        max-width: 480px;
+        border: 2px solid white;
+        padding: 2rem;
+        box-shadow: 0px 0px 20px red;
+        filter: drop-shadow(0px 0px 20px green);
+        border-radius: 10px;
+    }
+
+    .radioBtn {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .radio-group {
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+
+<body>
+    <div class="form-box">
+
+
+        <form id="userForm">
+            <label for="username">UserName:</label>
+            <input type="text" name="username" placeholder="enter your username">
+            <label for="email">Email: </label>
+            <input type="email" name="email" placeholder="enter your email">
+
+            <!-- Multiple values with same name -->
+            <div class="radioBtn">
+                <label for="">Language Proficiency: </label>
+                <div class="radio-group"><input type="radio" name="languageProficiency" value="Beginner">Beginner</div>
+                <div class="radio-group"><input type="radio" name="languageProficiency"
+                        value="Intermediate">Intermediate</div>
+                <div class="radio-group"><input type="radio" name="languageProficiency" value="Advance">Advance</div>
+
+            </div>
+
+
+        </form>
+        <button onclick="collectData()">Submit Form</button>
+    </div>
+</body>
+
+
+</html>
